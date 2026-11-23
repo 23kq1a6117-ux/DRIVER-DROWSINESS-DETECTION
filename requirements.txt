@@ -1,0 +1,13 @@
+# Core runtime dependencies. Tested with Python 3.12 (use Python 3.10-3.12).
+#
+# These pins are deliberate:
+#  * mediapipe 0.10.21 is the newest release tested that still provides the
+#    `mp.solutions.face_mesh` API used here (newer releases removed it).
+#  * mediapipe needs NumPy < 2 and bundles OpenCV, so we install
+#    opencv-contrib-python (NOT opencv-python) to avoid two clashing `cv2` packages.
+mediapipe==0.10.21
+opencv-contrib-python==4.11.0.86
+numpy>=1.26,<2
+pyttsx3>=2.90           # offline text-to-speech alarm
+pyserial>=3.5           # optional: Arduino LED/buzzer output (not the "serial" package)
+streamlit>=1.40,<1.50   # optional: dashboard (app.py); range compatible with mediapipe's protobuf
