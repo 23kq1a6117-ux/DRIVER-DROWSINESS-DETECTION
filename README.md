@@ -68,7 +68,7 @@ git clone <your-repo-url>
 cd driver-drowsiness-detection
 python -m venv .venv
 Set-ExecutionPolicy -Scope Process Bypass     # only if activation is blocked
-.venv\Scripts\Activate.ps1
+.venv\Scripts\Activate.ps1 
 python -m pip install -r requirements.txt
 ```
 
